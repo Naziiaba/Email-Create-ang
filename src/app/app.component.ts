@@ -15,17 +15,24 @@ import { Component } from '@angular/core';
 /**
  * Data binding
  * 1. interpolation - component class to the view
- * 2. Event - from view to component class data binding
+ * 2. Event - from view to controller data binding
+ * 3. Two-way data binding
  */
 export class AppComponent {
   title = 'Email-Create-ang';
   pageContent: string;
 
+  months: Array<string>;
+
   constructor() {
     this.pageContent = 'The Content goes here';
+    this.months = [
+      'March', 'May', 'July', 'September'
+    ];
   }
 
-  /**
-   * Lifecycle Hooks
-   */
+ onClick(event) {
+  this.pageContent = 'the Content has changed';
+  this.months.push('November');
+ }
 }

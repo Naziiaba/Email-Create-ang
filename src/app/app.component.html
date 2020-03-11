@@ -1,11 +1,21 @@
 <h2>Beginning of the new application</h2>
-
-<div class="page-container">
-  <h1>HOME PAGE</h1>
-</div>
-
+<h1>HOME PAGE</h1>
 
 <!--Data binding or interpolation/expression  {{  }}-->
 <div class="page-container">
   <h1> {{ pageContent }}</h1>
 </div>
+
+<button (click) = "onClick($event)">Click me</button>
+<br>
+<input [(ngModel)] = "pageContent">
+
+<ul>
+  <li *ngFor="let item of months;">{{item}}</li>
+
+  <br>
+  <li>{{ months[0] }}</li>
+  <li>{{ months[1] }}</li>
+  <li>{{ months[2] }}</li>
+  <li>{{ months[3] }}</li>
+</ul>
