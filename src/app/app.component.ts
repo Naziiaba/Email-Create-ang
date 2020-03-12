@@ -22,13 +22,20 @@ export class AppComponent {
   title = 'Email-Create-ang';
   pageContent: string;
 
-  months: Array<string>;
+  // tslint:disable-next-line: ban-types
+  months: Array<Object>;
 
   constructor() {
     this.pageContent = 'The Content goes here';
     this.months = [
       'March', 'May', 'July', 'September'
     ];
+  //   this.months = [
+  //     { name: 'March' },
+  //     { name: 'May' },
+  //     { name: 'August' },
+  //     { name: 'October' }
+  //   ];
   }
 
  onClick(event) {

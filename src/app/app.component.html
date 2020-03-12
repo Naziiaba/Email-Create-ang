@@ -3,13 +3,20 @@
 
 <!--Data binding or interpolation/expression  {{  }}-->
 <div class="page-container">
-  <h1> {{ pageContent }}</h1>
+  <h1> {{ pageContent + ' common string' }}</h1>
 </div>
 
 <button (click) = "onClick($event)">Click me</button>
 <br>
 <input [(ngModel)] = "pageContent">
 
+<!-- 
+  <ul>
+  <li *ngFor="let item of months;">{{item}}</li>
+</ul> -->
+
+
 <ul>
   <li *ngFor="let item of months;">{{item}}</li>
+
 </ul>
