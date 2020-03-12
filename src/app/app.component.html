@@ -15,6 +15,9 @@
   <li *ngFor="let item of months;">{{item}}</li>
 </ul> -->
 
+<input [(ngModel)] = "pageContent">
+
+<div class="circle" *ngIf="isCircleShowing"></div>
 
 <ul>
   <li *ngFor="let item of months;">{{item}}</li>
