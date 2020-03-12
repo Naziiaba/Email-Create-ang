@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MailboxComponent } from './mailbox/mailbox.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MailboxComponent
   ],
   imports: [
     BrowserModule,
