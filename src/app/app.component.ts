@@ -25,37 +25,5 @@ import { Component } from '@angular/core';
  * variable value or expression output
  */
 export class AppComponent {
-  title = 'Email-Create-ang';
-  pageContent: string;
-
-  // tslint:disable-next-line: ban-types
-  months: Array<Object>;
-
-  show = true;
-
-  constructor() {
-    this.pageContent = 'The Content goes here';
-    this.months = [
-      'March', 'May', 'July', 'September'
-    ];
-  //   this.months = [
-  //     { name: 'March' },
-  //     { name: 'May' },
-  //     { name: 'August' },
-  //     { name: 'October' }
-  //   ];
- 
-    // setInterval(() => {
-    //   this.show = !this.show;
-    // }, 1000);
-  }
-
- onClick(event) {
-  this.pageContent = 'the Content has changed';
-  this.months.push('November');
- }
-
- shouldShowCircle() {
-   return this.show;
- }
+  
 }

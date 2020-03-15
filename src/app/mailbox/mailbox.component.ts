@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-mailbox',
-  templateUrl: './mailbox.component.html',
-  styleUrls: ['./mailbox.component.css']
+  templateUrl: 'mailbox.component.html',
+  styleUrls: ['mailbox.component.css']
 })
-export class MailboxComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class MailboxComponent {
+  navLinks = [
+    'Compose',
+    'Inbox',
+    'Sent Items'
+  ];
 
 }
