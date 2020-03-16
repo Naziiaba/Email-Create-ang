@@ -26,23 +26,35 @@ export class LeftNavComponent implements OnInit {
    * </app-mailbox>
    */
   @Output() menuSelectionChange = new EventEmitter();
-  
   /**
-   * Parent to child => parent has some data and child can receive it 
-   * and use that to bind in views.
-   * Child to Parent => child has some action, parent will get notified 
-   * using an event.
+   * Parent to child Data Binding => parent has some data and child can receive it
+   * and use that to bind in views => Input.
+   * Parent to child -Listener => action is happening in parent and child should
+   *  listen it => use Lifecycle Hook called - ngOnChanges
+   * Parent to child - Listener => take reference of child class in parent 
+   * component and access required methods - ViewChild.
+   * Child to Parent => child has some action, parent will get notified
+   * using an event => Output decorator
    */
   constructor() { }
 
-  ngOnChanges() {
-    this.navData.push('last');
+  ngOnChanges(changes) {
+    if (changes.navData) {
+      //this.processData();
+    }
   }
-  ngOnInit() { 
-    this.navData.push('last');
+  ngOnInit() {
+    /**
+     * process the input data and modify it according to the business requirement.
+     */
+    this.navData.push('middle');
   }
 
   onLinkClick(linkIndex: number) {
     this.menuSelectionChange.emit(linkIndex);
+  }
+
+  processData() {
+    this.navData.push('last');
   }
 }
