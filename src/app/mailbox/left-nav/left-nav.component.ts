@@ -5,7 +5,7 @@ import { EventEmitter } from '@angular/core';
   selector: 'app-left-nav',
   templateUrl: './left-nav.component.html',
   styleUrls: ['./left-nav.component.css'],
-  encapsulation: ViewEncapsulation.Emulated
+  // encapsulation: ViewEncapsulation.Emulated
 })
 
 export class LeftNavComponent implements OnInit {
