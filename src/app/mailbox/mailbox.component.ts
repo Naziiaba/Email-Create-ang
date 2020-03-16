@@ -15,4 +15,10 @@ export class MailboxComponent {
   onSelectionChange(event) {
 
   }
+  changeData() {
+    this.navLinks = [
+    'Compose1',
+    'Inbox2',
+    'Sent Items3'];
+  }
 }

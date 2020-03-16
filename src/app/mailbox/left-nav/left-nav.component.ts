@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { EventEmitter } from 'protractor';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-left-nav',
@@ -26,13 +26,23 @@ export class LeftNavComponent implements OnInit {
    * </app-mailbox>
    */
   @Output() menuSelectionChange = new EventEmitter();
+  
+  /**
+   * Parent to child => parent has some data and child can receive it 
+   * and use that to bind in views.
+   * Child to Parent => child has some action, parent will get notified 
+   * using an event.
+   */
   constructor() { }
 
-  ngOnInit() {
+  ngOnChanges() {
+    this.navData.push('last');
+  }
+  ngOnInit() { 
+    this.navData.push('last');
   }
 
   onLinkClick(linkIndex: number) {
     this.menuSelectionChange.emit(linkIndex);
   }
-
 }
