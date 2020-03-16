@@ -12,4 +12,7 @@ export class MailboxComponent {
     'Sent Items'
   ];
 
+  onSelectionChange(event) {
+
+  }
 }
