@@ -1,10 +1,12 @@
-<button (click) = "changeData();">Click me</button>
+<div class="mailbox-wrapper">
+    <button (click) = "changeData();">Click me</button>
 
-<!-- This used for Encapsulation example 
+<!-- This used for Encapsulation example  -->
 <ul class= "my-list">
     <li>Parent's list</li>
-</ul> -->
+</ul>
 
 <hr>
 
 <app-left-nav [navData] = "navLinks" (menuSelectionChange) = "onSelectionChange($event);"></app-left-nav>
+</div>
