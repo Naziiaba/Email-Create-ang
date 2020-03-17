@@ -71,7 +71,7 @@ export class LeftNavComponent implements OnInit {
    * it detects changes that angular cannot.
    */
   // ngDoCheck() {
-  // } 
+  // }
   /**
    * All external contents are checked for data binding and angular processing.
    */
