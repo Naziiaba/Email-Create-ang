@@ -7,17 +7,11 @@ import { LoginComponent } from './login.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LeftNavComponent,
-    MailboxComponent,
     LoginComponent
   ],
   imports: [
-    BrowserModule,
     FormsModule,
-    AppRoutingModule
+    LoginRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class LoginModule { }
