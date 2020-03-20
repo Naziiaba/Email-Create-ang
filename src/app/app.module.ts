@@ -18,6 +18,7 @@ import { LoginModule } from './login/login.module';
   imports: [
     BrowserModule,
     FormsModule,
+    AppRoutingModule,
     LoginModule
   ],
   providers: [],

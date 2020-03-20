@@ -6,7 +6,8 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [{
   path: '',
-  component: LoginComponent
+  loadChildren: () => import('./login/login-routing.module').then(mod => 
+    mod.LoginRoutingModule)
 }, {
   path: 'login',
   component: LoginComponent
