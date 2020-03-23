@@ -1,5 +1,6 @@
 a {
     font-size: 12px;
+    position: relative;
 }
 
 a.active {
@@ -10,4 +11,26 @@ a.active {
 li {
     display: inline-block;
     margin: 10px;
+}
+.tooltip {
+    display: inline-block;
+    position: absolute;
+    background-color: white;
+    border: 1px solid rgb(65, 59, 59);
+    white-space: nowrap;
+    z-index: 1;
+    top: calc(100% + 4px);
+    left: 0px;
+}
+.tooltip:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border-top: 5px solid rgb(82, 75, 75);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    top: -12px;
+    left: 0px;
+    width: 5px;
+    height: 4px;
 }
