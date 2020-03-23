@@ -8,9 +8,13 @@ import { MailboxComponent } from './mailbox/mailbox.component';
 import { LeftNavComponent } from './mailbox/left-nav/left-nav.component';
 import { LoginComponent } from './login/login.component';
 import { LoginModule } from './login/login.module';
+import { AppTooltipDirective } from './shared/tooltip.directive';
 
 @NgModule({
   declarations: [
+    AppTooltipDirective,
+    LeftNavComponent,
+    MailboxComponent,
     AppComponent
   ],
   imports: [

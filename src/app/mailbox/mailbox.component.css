@@ -1,7 +1,8 @@
 .my-list {
-    color: red;
+    color: rgb(18, 180, 26);
 }
 
 .mailbox-wrapper {
-    border: 1px solid black;
+    border: 1px solid rgb(59, 55, 55);
+    margin: 30px 10px;
 }

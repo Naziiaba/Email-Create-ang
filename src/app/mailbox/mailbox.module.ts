@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { MailboxRoutingModule } from './mailbox-routing.module';
 import { MailboxComponent } from './mailbox.component';
 import { LeftNavComponent } from './left-nav/left-nav.component';
+import { Router } from 'express';
 
 @NgModule({
   declarations: [
@@ -15,5 +16,13 @@ import { LeftNavComponent } from './left-nav/left-nav.component';
     FormsModule,
     MailboxRoutingModule
   ],
+  exports: [
+    LeftNavComponent,
+    MailboxRoutingModule
+  ],
+  // providers allow us to inject array of routers.
+  providers: [
+    Router
+  ]
 })
 export class MailboxModule { }

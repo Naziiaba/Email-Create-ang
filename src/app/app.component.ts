@@ -25,5 +25,4 @@ import { Component } from '@angular/core';
  * variable value or expression output
  */
 export class AppComponent {
-  
 }
