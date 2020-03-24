@@ -1,10 +1,10 @@
 <!-- To use router links we need routerModule dependency -->
 <ul>
     <li>
-        <a appTooltip = "Click for login" routerLink="/login" routeLinkActive="active">LOGIN</a>
+        <a appTooltip = "Click for login" routerLink="/login" routeLinkActive="active">{{'login page' | titlecase}}</a>
     </li>
     <li>
-        <a appTooltip = "Go to mailbox" routerLink="/mailbox" routeLinkActive="active">MAILBOX</a>
+        <a appTooltip = "Go to mailbox" routerLink="/mailbox" routeLinkActive="active">Mailbox</a>
     </li>
     <li>
         <a routerLink="/xyz" routeLinkActive="active">LINK 3</a>
@@ -13,6 +13,8 @@
         <a routerLink="/abc" routeLinkActive="active">LINK 4</a>
     </li>
 </ul>
+
+<h2>{{'Bill Gates' | titlename:true}}</h2>
 <hr>
 <!-- Router outlet will load the coomponent/module specified in routes array
 (app-routing-module.ts) -->

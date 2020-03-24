@@ -18,11 +18,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
  * 2. Event - from view to controller data binding
  * 3. Two-way data binding
  * *ngFor - iterates the array list and render the data on UI.
- * 
  * *ngIf - dynamically showing and hiding elements depending on variable
  *  value or expression output
- * 
- * *ngIf - dynamically adding/removing elements from DOM depending on 
+ * *ngIf - dynamically adding/removing elements from DOM depending on
  * variable value or expression output
  */
 export class AppComponent {
