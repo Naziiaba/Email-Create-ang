@@ -1,17 +1,27 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 
-/**Component DECORATOR and METADATA
+/**
+ * Component DECORATOR and METADATA
  * selector: this will act as an element tag to use this component.
  * templateUrl: is a VIEW for my component.
  * styleUrl: css styling
  */
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.css'],
   encapsulation: ViewEncapsulation.None
 })
+
+export class AppComponent {
+  constructor(private http: HttpClient) {
+    this.http.get('https://jsonplaceholder.typicode.com/todos/1').subscribe
+    (response => {
+      console.log(response);
+    });
+  }
+}
 /**
  * Data binding
  * 1. interpolation - component class to the view
@@ -23,5 +33,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
  * *ngIf - dynamically adding/removing elements from DOM depending on
  * variable value or expression output
  */
+
 export class AppComponent {
 }

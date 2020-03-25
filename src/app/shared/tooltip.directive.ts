@@ -1,5 +1,13 @@
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
+/**
+ * Directives
+ * Directives are properties given to html element to change appearance 
+ * or behavour of element.
+ * 1.Structural = examples are *ngIf and *ngFor
+ * 2.Component = these can be created using @Component decorator
+ * 3. Attributes = it will act as attribute, as shown in this example
+ */
 @Directive({
     selector: '[appTooltip]'
 })
