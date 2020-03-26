@@ -20,7 +20,9 @@ export class AppTooltipDirective {
         elementRef.nativeElement.style.color = 'red';
         this.currentElement = elementRef.nativeElement;
     }
-
+/**
+ * HostListener is decorator to capture event and add event listener to it.
+ */
     @HostListener('mouseenter', ['$event.target']) onMouseEnter(event) {
         this.tooltipElem = document.createElement('span');
         this.tooltipElem.setAttribute('class', 'tooltip');
