@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { LoginModule } from './login/login.module';
 import { AppTooltipDirective } from './shared/tooltip.directive';
 import { TitleNamePipe } from './shared/nametitle.pipe';
+import { UserService } from './shared/user.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { TitleNamePipe } from './shared/nametitle.pipe';
     AppRoutingModule,
     LoginModule
   ],
-  providers: [HttpClient],
+  providers: [HttpClient, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

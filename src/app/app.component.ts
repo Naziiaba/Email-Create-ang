@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { UserService } from './shared/user.service';
 
 
 /**
@@ -15,11 +16,15 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 
 export class AppComponent {
-  constructor(private http: HttpClient) {
-    this.http.get('https://jsonplaceholder.typicode.com/todos/1').subscribe
-    (response => {
-      console.log(response);
-    });
+  userTitle: string;
+  constructor(
+    private http: HttpClient,
+    private userService: UserService) {
+    // this.http.get('https://jsonplaceholder.typicode.com/todos/1').subscribe
+    // (response => {
+    //   console.log(response);
+    // });
+    this.userTitle = this.userService.userData.title;
   }
 }
 /**
