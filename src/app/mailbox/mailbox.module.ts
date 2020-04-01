@@ -6,6 +6,7 @@ import { MailboxRoutingModule } from './mailbox-routing.module';
 import { MailboxComponent } from './mailbox.component';
 import { LeftNavComponent } from './left-nav/left-nav.component';
 import { Router } from 'express';
+import { UserService } from '../shared/user.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { Router } from 'express';
   ],
   // providers allow us to inject array of routers.
   providers: [
-    Router
+    Router,
+    UserService
   ]
 })
 export class MailboxModule { }

@@ -9,22 +9,20 @@ import { UserService } from './shared/user.service';
  * styleUrl: css styling
  */
 @Component({
-  selector: 'app-root',
+  selector: 'app-root-test',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 
 export class AppComponent {
-  userTitle: string;
   constructor(
     private http: HttpClient,
-    private userService: UserService) {
+    public userService: UserService) {
     // this.http.get('https://jsonplaceholder.typicode.com/todos/1').subscribe
     // (response => {
     //   console.log(response);
     // });
-    this.userTitle = this.userService.userData.title;
   }
 }
 /**

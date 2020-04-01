@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { LeftNavComponent } from './left-nav/left-nav.component';
 import { Router, ActivationEnd } from '@angular/router';
+import { UserService } from '../shared/user.service';
 
 @Component({
   selector: 'app-mailbox',
@@ -15,7 +16,8 @@ export class MailboxComponent {
     'Sent Items'
   ];
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              public userService: UserService) {
     this.router.events.subscribe((event: ActivationEnd) => {
       if (event.snapshot && event.snapshot.params) {
         const paramID = event.snapshot.params;
