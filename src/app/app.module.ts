@@ -11,6 +11,7 @@ import { LoginModule } from './login/login.module';
 import { AppTooltipDirective } from './shared/tooltip.directive';
 import { TitleNamePipe } from './shared/nametitle.pipe';
 import { UserService } from './shared/user.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [

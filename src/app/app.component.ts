@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { UserService } from './shared/user.service';
+import { HttpClient } from '@angular/common/http';
 
 
 /**
@@ -9,7 +10,7 @@ import { UserService } from './shared/user.service';
  * styleUrl: css styling
  */
 @Component({
-  selector: 'app-root-test',
+  selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
   encapsulation: ViewEncapsulation.None
