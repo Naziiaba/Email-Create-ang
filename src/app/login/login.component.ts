@@ -19,5 +19,5 @@ export class LoginComponent {
       completed: false
       };
 
-    }
-}
+  }
+

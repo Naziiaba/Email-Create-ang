@@ -5,16 +5,22 @@ import { Injectable, Component } from '@angular/core';
  * Instance of service will be available for completing lifecycle of angular app.
  * Services are used for managing data/business logic/communicating components.
  */
+export interface UserData {
+    userId: number;
+    id: number;
+    title: string;
+    completed?: boolean;
+}
 
 @Injectable()
 
 export class UserService {
-     userData: any;
+     private userData: UserData;
      constructor() {
             this.userData = {
-             userId: 1,
+            userId: 1,
             id: 1,
-            title: 'delectus',
+            title: 'Deletus stunm aol',
             completed: false
             };
      };
