@@ -7,7 +7,7 @@ import { UserService } from '../shared/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(public userService: UserService)
+  constructor(public userService: UserService) {
 
   }
 
@@ -20,4 +20,4 @@ export class LoginComponent {
       };
 
   }
-
+}
