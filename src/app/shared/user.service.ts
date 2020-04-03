@@ -17,7 +17,7 @@ export class UserService {
             title: 'delectus',
             completed: false
             };
-     }
+     };
 
     get userData$() {
         return this.userData;

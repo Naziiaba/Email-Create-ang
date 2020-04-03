@@ -20,10 +20,10 @@ export class AppComponent {
   constructor(
     private http: HttpClient,
     public userService: UserService) {
-    // this.http.get('https://jsonplaceholder.typicode.com/todos/1').subscribe
-    // (response => {
-    //   console.log(response);
-    // });
+    const dataObservable = this.http.get('https://jsonplaceholder.typicode.com/todos/1');  
+    dataObservable.subscribe(response => {
+      console.log(response);
+    });
   }
 }
 /**
@@ -37,6 +37,3 @@ export class AppComponent {
  * *ngIf - dynamically adding/removing elements from DOM depending on
  * variable value or expression output
  */
-
-export class AppComponent {
-}
