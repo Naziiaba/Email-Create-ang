@@ -15,7 +15,7 @@ export class UserService {
              userId: 1,
             id: 1,
             title: 'delectus',
-            complete: false
+            completed: false
             };
      }
 
