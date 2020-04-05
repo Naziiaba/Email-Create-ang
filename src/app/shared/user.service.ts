@@ -15,7 +15,7 @@ export interface UserData {
 @Injectable()
 
 export class UserService {
-     private userData: UserData;
+     public userData: UserData;
      constructor() {
             this.userData = {
             userId: 1,
