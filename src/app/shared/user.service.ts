@@ -23,6 +23,12 @@ export class UserService {
             title: 'Deletus stunm aol',
             completed: false
             };
+            this.userData = {
+                userId: 1,
+                id: 1,
+                title: 'Deletus lusto aol',
+                completed: true
+                };
      };
 
     get userData$() {
