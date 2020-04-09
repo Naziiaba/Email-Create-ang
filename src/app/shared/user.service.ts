@@ -20,15 +20,9 @@ export class UserService {
             this.userData = {
             userId: 1,
             id: 1,
-            title: 'Deletus stunm aol',
+            title: 'This is for service',
             completed: false
             };
-            this.userData = {
-                userId: 1,
-                id: 1,
-                title: 'Deletus lusto aol',
-                completed: true
-                };
      };
 
     get userData$() {
