@@ -23,7 +23,7 @@ export class UserService {
             title: 'This is for service',
             completed: false
             };
-     };
+     }
 
     get userData$() {
         return this.userData;

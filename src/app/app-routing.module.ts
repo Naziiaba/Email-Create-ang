@@ -14,7 +14,7 @@ export class MyAuthClass implements CanActivate {
     /**
      * the logic to authenticate the user
      */
-    let isAuthenticated: boolean = false;
+    let isAuthenticated = false;
     if (Math.random() > 0.5) {
       isAuthenticated = true;
     }
@@ -43,7 +43,7 @@ const routes: Routes = [{
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  //imports: [RouterModule.forRoot(routes, { useHash: true})],
+  // imports: [RouterModule.forRoot(routes, { useHash: true})],
   exports: [RouterModule],
   providers: [MyAuthClass]
 })
