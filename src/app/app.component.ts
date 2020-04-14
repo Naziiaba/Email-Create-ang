@@ -20,10 +20,23 @@ export class AppComponent {
   constructor(
     private http: HttpClient,
     public userService: UserService) {
-    const dataObservable = this.http.get('https://jsonplaceholder.typicode.com/todos/1');  
-    dataObservable.subscribe(response => {
-      console.log(response);
-    });
+    // const dataObservable = this.http.get('https://jsonplaceholder.typicode.com/todos/1');
+    // dataObservable.subscribe(response => {
+    //   console.log(response);
+    // });
+
+    this.getDataByXHR('https://jsonplaceholder.typicode.com/todos/1');
+  }
+  getDataByXHR(url: string) {
+    let xhr = new XMLHttpRequest();
+    // tslint:disable-next-line: only-arrow-functions
+    xhr.onreadystatechange = function() {
+      if (this.readyState === 4 && this.status === 200) {
+        console.log(this.responseText);
+      }
+    };
+    xhr.open('GET', url);
+    xhr.send();
   }
 }
 /**
