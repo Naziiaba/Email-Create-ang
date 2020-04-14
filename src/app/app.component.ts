@@ -25,14 +25,18 @@ export class AppComponent {
     //   console.log(response);
     // });
 
+    console.log('this is one');
     this.getDataByXHR('https://jsonplaceholder.typicode.com/todos/1');
+    console.log('this is three');
   }
   getDataByXHR(url: string) {
     let xhr = new XMLHttpRequest();
     // tslint:disable-next-line: only-arrow-functions
     xhr.onreadystatechange = function() {
+      // it will call 4 times in this scenario
       if (this.readyState === 4 && this.status === 200) {
         console.log(this.responseText);
+        console.log('this is two');
       }
     };
     xhr.open('GET', url);
