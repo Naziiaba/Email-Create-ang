@@ -17,6 +17,8 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class AppComponent {
+  appUserData: any;
+
   constructor(
     private http: HttpClient,
     public userService: UserService) {
@@ -26,8 +28,13 @@ export class AppComponent {
     // });
 
     console.log('this is one');
-    this.getDataByXHR('https://jsonplaceholder.typicode.com/todos/1');
+    const responseData = this.getDataByXHR('https://jsonplaceholder.typicode.com/todos/1');
     console.log('this is three');
+    this.processData(responseData);
+  }
+
+  processData(userData) {
+    this.appUserData = [ ...userData, ...userData];
   }
   getDataByXHR(url: string) {
     let xhr = new XMLHttpRequest();
@@ -36,7 +43,7 @@ export class AppComponent {
       // it will call 4 times in this scenario
       if (this.readyState === 4 && this.status === 200) {
         console.log(this.responseText);
-        console.log('this is two');
+        return this.responseText;
       }
     };
     xhr.open('GET', url);
