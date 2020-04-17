@@ -42,7 +42,7 @@ export class AppComponent {
     xhr.onreadystatechange = function() {
       // it will call 4 times in this scenario
       if (this.readyState === 4 && this.status === 200) {
-        console.log(this.responseText);
+        //console.log(this.responseText);
         return this.responseText;
       }
     };
